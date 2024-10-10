@@ -1,11 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello World!</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="public/output.css" rel="stylesheet" />
+    <title>Gus Hakam</title>
+    <style>
+      /* Menyembunyikan scrollbar, tapi tetap bisa digulir */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="font-karla overflow-auto no-scrollbar">
+    <nav
+      class="w-full px-5 md:px-48 py-6 bg-primary text-black flex justify-between items-center fixed z-[999]"
+    >
+
+    <!-- Logo -->
+      <div>
+        <h3 class="text-3xl">GUS<span class="font-extrabold">HAKAM</span></h3>
+      </div>
+
+      <!-- Tampilan Desktop -->
+      <div class="hidden md:block">
+        <ul class="flex gap-7 items-center text-xl">
+          <li><a href="/">Beranda</a></li>
+          <li><a href="#">Kajian</a></li>
+          <li><a href="#">Jadwal Kajian</a></li>
+          <li><a href="/kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+
+      <!-- Humberger Menu -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600">
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+
+      <!-- Tampilan Mobile -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="#" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="py-36 px-5 md:px-48">
+      <div class="px-24 grid grid-cols-3 items-center">
+        <img
+          src="public/img/ustaz-abdul.jpg"
+          alt=""
+          class="h-48 w-48 rounded-full object-cover"
+        />
+        <div class="col-span-2">
+          <h1 class="text-5xl">GUS</h1>
+          <h1 class="text-5xl font-extrabold">HAKAM KHARIRI</h1>
+          <p class="text-lg text-neutral-500">Pengurus Pondok Pesantren.</p>
+        </div>
+      </div>
+
+      <div class="mt-24 px-0 md:px-24">
+        <h1 class="text-3xl font-extrabold">PROFIL</h1>
+        <p class="text-neutral-500 text-lg text-justify mt-3">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+          doloribus adipisci ut fugiat omnis iste ipsum unde, ducimus, eos dolor
+          repudiandae obcaecati quis eum totam laborum quibusdam sunt. Quos
+          soluta fugit ipsum minima a nemo nisi corrupti fugiat consequuntur
+          reprehenderit at perspiciatis temporibus blanditiis, mollitia, dolores
+          quas minus officia consequatur. Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Eveniet perferendis eum reprehenderit?
+          Velit ex dolorum non culpa. Repellendus recusandae dicta eligendi,
+          veritatis hic soluta repellat qui quod et alias sapiente error ad,
+          perferendis nam. Ratione sit magni voluptate dolor est quae iste quod
+          exercitationem dolore itaque, sequi at nisi vero?
+        </p>
+      </div>
+
+      <div class="mt-24 px-0 md:px-24">
+        <h1 class="text-3xl font-extrabold mb-5">KAJIAN</h1>
+        <div class="flex justify-between flex-wrap md:flex-nowrap">
+          <div class="w-full md:w-72 mx-auto">
+            <!-- <iframe src="https://youtu.be/embed/PL3Odw-k8W4?si=gM1gbZyt-saJ09Yr" frameborder="0"></iframe> -->
+            <iframe
+              src="https://www.youtube.com/embed/mG_dLIsnb6w?si=kEOSwTZU9zeI9D_w"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <h1 class="font-extrabold text-lg tracking-tight mt-2">
+              Mengenang rasa cinta.
+            </h1>
+            <p class="text-lg text-neutral-500 leading-5 mt-1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <button
+              onclick="toggleDrawer()"
+              class="px-4 py-2 bg-primary mt-5 text-black rounded-full"
+            >
+              Read more
+            </button>
+
+            <div
+              id="overlay"
+              class="fixed inset-0 bg-black bg-opacity-50 hidden z-40 px-72"
+              onclick="toggleDrawer()"
+            ></div>
+
+            <div
+              id="drawer"
+              class="fixed inset-x-0 bottom-0 transform translate-y-full transition-transform duration-300 ease-in-out bg-primary shadow-lg w-[60rem] mx-auto rounded-t-xl p-10 z-50"
+            >
+              <div class="grid grid-cols-2 justify-center">
+                <iframe
+                    width="400"
+                    height="225"
+                  src="https://www.youtube.com/embed/mG_dLIsnb6w?si=kEOSwTZU9zeI9D_w"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                  class="rounded-t-lg"
+                ></iframe>
+                <div>
+                    <h1 class="font-extrabold text-lg tracking-tight mt-2">
+                        Mengenang rasa cinta.
+                      </h1>
+                      <p class="text-lg text-neutral-500 leading-5 mt-1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam nulla quisquam repudiandae impedit atque sequi magnam blanditiis dolore omnis sint et quaerat itaque excepturi praesentium ducimus corporis cumque quasi, perferendis quibusdam distinctio enim. Voluptatibus incidunt sequi inventore architecto veritatis fugit nam, quos et vel nemo, iusto possimus, praesentium alias quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aut sequi quisquam cupiditate nemo ratione consectetur necessitatibus assumenda earum veritatis.
+                      </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-72">
+            <iframe
+              src="https://www.youtube.com/embed/C8uHXdk-c4Y?si=WKvL7BXVI2toOn_A"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <p class="font-extrabold text-lg tracking-tight mt-2">
+              Nikmatnya beribadah
+            </p>
+            <p class="text-lg text-neutral-500 leading-5 mt-1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <button
+              onclick="toggleDrawer()"
+              class="px-4 py-2 bg-primary mt-5 text-black rounded-full"
+            >
+              Read more
+            </button>
+          </div>
+          <div class="w-72">
+            <iframe
+              src="https://www.youtube.com/embed/imlMNgo4KBc?si=r9eOQ8SLu9o2vZoe"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <p class="font-extrabold text-lg tracking-tight mt-2">
+              Kunci subuh lebih berkah.
+            </p>
+            <p class="text-lg text-neutral-500 leading-5 mt-1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <button
+              onclick="toggleDrawer()"
+              class="px-4 py-2 bg-primary mt-5 text-black rounded-full"
+            >
+              Read more
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="w-full px-5 md:px-48 py-6 bg-primary text-black flex justify-center items-center"
+    >
+      <p>© 2022 GUS HAKAM</p>
+    </footer>
+
+    <script>
+      function toggleDrawer() {
+        const drawer = document.getElementById("drawer");
+        const overlay = document.getElementById("overlay");
+
+        // Toggle the drawer and overlay
+        drawer.classList.toggle("translate-y-full");
+        overlay.classList.toggle("hidden");
+      }
+
+      // Script to toggle the mobile menu visibility
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      let menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+    </script>
+  </body>
 </html>
