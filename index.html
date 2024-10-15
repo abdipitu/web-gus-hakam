@@ -13,57 +13,55 @@
     </style>
   </head>
   <body class="font-karla overflow-auto no-scrollbar">
-    <nav
-      class="w-full px-5 md:px-48 py-6 bg-primary text-black flex justify-between items-center fixed z-[999]"
-    >
-
-    <!-- Logo -->
-      <div>
-        <h3 class="text-3xl">GUS<span class="font-extrabold">HAKAM</span></h3>
+    <nav class="bg-primary">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-20 md:h-24">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="#" class="text-3xl font-medium text-black">GUS <span class="font-extrabold">HAKAM</span></a>
+          </div>
+          
+          <!-- Menu for large screens -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a href="index.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-lg font-medium">Beranda</a>
+              <a href="kajian.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-lg font-medium">Kajian</a>
+              <a href="jadwal.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-lg font-medium">Jadwal Kajian</a>
+            </div>
+          </div>
+  
+          <!-- Hamburger icon for mobile screens -->
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600">
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
-
-      <!-- Tampilan Desktop -->
-      <div class="hidden md:block">
-        <ul class="flex gap-7 items-center text-xl">
-          <li><a href="/">Beranda</a></li>
-          <li><a href="#">Kajian</a></li>
-          <li><a href="#">Jadwal Kajian</a></li>
-          <li><a href="/kontak.html">Kontak</a></li>
-        </ul>
-      </div>
-
-      <!-- Humberger Menu -->
-      <div class="md:hidden">
-        <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600">
-          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
-
-
-      <!-- Tampilan Mobile -->
+  
+      <!-- Mobile menu (hidden by default) -->
       <div id="mobile-menu" class="md:hidden hidden">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <a href="#" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
           <a href="#" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
           <a href="#" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Services</a>
-          <a href="#" class="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
         </div>
       </div>
     </nav>
 
     <main class="py-36 px-5 md:px-48">
-      <div class="px-24 grid grid-cols-3 items-center">
+      <div class="px-0 md:px-24 flex flex-col items-center w-full">
         <img
-          src="public/img/ustaz-abdul.jpg"
-          alt=""
-          class="h-48 w-48 rounded-full object-cover"
+          src="public/img/gus-hakam.jpg"
+          alt="foto gus hakam"
+          class="h-48 w-48 rounded-full object-cover" 
         />
-        <div class="col-span-2">
-          <h1 class="text-5xl">GUS</h1>
-          <h1 class="text-5xl font-extrabold">HAKAM KHARIRI</h1>
-          <p class="text-lg text-neutral-500">Pengurus Pondok Pesantren.</p>
+        <div class="mx-auto mt-6">
+          <h1 class="text-5xl text-center">GUS</h1>
+          <h1 class="text-5xl font-extrabold text-center">HAKAM KHARIRI</h1>
+          <p class="text-lg text-neutral-500 text-center">Pengasuh Pondok Pesantren.</p>
         </div>
       </div>
 
@@ -86,11 +84,11 @@
 
       <div class="mt-24 px-0 md:px-24">
         <h1 class="text-3xl font-extrabold mb-5">KAJIAN</h1>
-        <div class="flex justify-between flex-wrap md:flex-nowrap">
-          <div class="w-full md:w-72 mx-auto">
+        <div class="flex justify-between flex-wrap gap-5 md:flex-nowrap">
+          <div class="w-full md:w-72">
             <!-- <iframe src="https://youtu.be/embed/PL3Odw-k8W4?si=gM1gbZyt-saJ09Yr" frameborder="0"></iframe> -->
             <iframe
-              src="https://www.youtube.com/embed/mG_dLIsnb6w?si=kEOSwTZU9zeI9D_w"
+            src="https://www.youtube.com/embed/zOvEZ2F_uXg?si=DikT0_hccDON58AK" 
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -98,11 +96,11 @@
               allowfullscreen
             ></iframe>
             <h1 class="font-extrabold text-lg tracking-tight mt-2">
-              Mengenang rasa cinta.
+              Umrah Barokah YPI Darul Falah
             </h1>
-            <p class="text-lg text-neutral-500 leading-5 mt-1">
+            <!-- <p class="text-lg text-neutral-500 leading-5 mt-1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
+            </p> -->
             <button
               onclick="toggleDrawer()"
               class="px-4 py-2 bg-primary mt-5 text-black rounded-full"
@@ -118,13 +116,13 @@
 
             <div
               id="drawer"
-              class="fixed inset-x-0 bottom-0 transform translate-y-full transition-transform duration-300 ease-in-out bg-primary shadow-lg w-[60rem] mx-auto rounded-t-xl p-10 z-50"
+              class="fixed inset-x-0 bottom-0 transform translate-y-full transition-transform duration-300 ease-in-out bg-primary shadow-lg w-80 lg:w-[60rem] mx-auto rounded-t-xl p-10 z-50"
             >
               <div class="grid grid-cols-2 justify-center">
                 <iframe
                     width="400"
                     height="225"
-                  src="https://www.youtube.com/embed/mG_dLIsnb6w?si=kEOSwTZU9zeI9D_w"
+                    src="https://www.youtube.com/embed/zOvEZ2F_uXg?si=DikT0_hccDON58AK"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -134,7 +132,7 @@
                 ></iframe>
                 <div>
                     <h1 class="font-extrabold text-lg tracking-tight mt-2">
-                        Mengenang rasa cinta.
+                        Umrah Barokah YPI Darul Falah
                       </h1>
                       <p class="text-lg text-neutral-500 leading-5 mt-1">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam nulla quisquam repudiandae impedit atque sequi magnam blanditiis dolore omnis sint et quaerat itaque excepturi praesentium ducimus corporis cumque quasi, perferendis quibusdam distinctio enim. Voluptatibus incidunt sequi inventore architecto veritatis fugit nam, quos et vel nemo, iusto possimus, praesentium alias quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aut sequi quisquam cupiditate nemo ratione consectetur necessitatibus assumenda earum veritatis.
@@ -145,7 +143,7 @@
           </div>
           <div class="w-72">
             <iframe
-              src="https://www.youtube.com/embed/C8uHXdk-c4Y?si=WKvL7BXVI2toOn_A"
+            src="https://www.youtube.com/embed/kjLeGvr51dA?si=KJMMX6K2L1pYw7yU"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -153,11 +151,11 @@
               allowfullscreen
             ></iframe>
             <p class="font-extrabold text-lg tracking-tight mt-2">
-              Nikmatnya beribadah
+              YPI Darul Falah Ziarah Walisongo
             </p>
-            <p class="text-lg text-neutral-500 leading-5 mt-1">
+            <!-- <p class="text-lg text-neutral-500 leading-5 mt-1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
+            </p> -->
             <button
               onclick="toggleDrawer()"
               class="px-4 py-2 bg-primary mt-5 text-black rounded-full"
@@ -194,7 +192,7 @@
     <footer
       class="w-full px-5 md:px-48 py-6 bg-primary text-black flex justify-center items-center"
     >
-      <p>© 2022 GUS HAKAM</p>
+      <p>© 2024 GUS HAKAM</p>
     </footer>
 
     <script>
