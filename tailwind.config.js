@@ -8,6 +8,7 @@ module.exports = {
       },
       fontFamily: {
         'karla': ['Karla', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
       },
     },
   },
