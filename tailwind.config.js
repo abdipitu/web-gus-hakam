@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         'karla': ['Karla', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],
+        'sora': ['Sora', 'sans-serif'],
+        'exo': ['Exo+2', 'sans-serif'],
+        'quicksand': ['Quicksand', 'sans-serif'],
       },
     },
   },

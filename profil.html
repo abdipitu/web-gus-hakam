@@ -14,8 +14,8 @@
   </head>
   <body class="font-sora overflow-auto no-scrollbar bg-white">
     <div class="w-[400px] h-[400px] bg-green-500 absolute z-1 rounded-full top-[20%] left-[24%] translate-x-[-50%] translate-y-[-50%] blur-[90px] opacity-20"></div>
-    <div class="w-[400px] h-[400px] bg-green-500 absolute z-1 rounded-full top-[70%] left-[70%] translate-x-[-50%] translate-y-[-50%] blur-[90px] opacity-20"></div>
-    <nav class="bg-primary text-black fixed z-[999] w-full z-3">
+    <div class="w-[40px] md:w-[400px] h-[400px] bg-green-500 absolute z-1 rounded-full top-[50%] left-[70%] translate-x-[-50%] translate-y-[-50%] blur-[90px] opacity-20"></div>
+    <nav class="bg-primary text-black fixed md:relative z-[999] w-full top-0">
       <div
         class="w-full px-5 md:px-48 py-6 flex justify-between items-center bg-primary"
       >
@@ -78,42 +78,44 @@
           >
         </div>
       </div>
+
     </nav>
 
-    <main
-      class="py-36 px-5 md:px-48 w-full min-h-screen flex flex-col md:justify-start justify-center items-center z-10"
-    >
-      <h1 class="text-3xl text-start font-extrabold">JADWAL KAJIAN</h1>
-      <p class="mb-10 text-lg text-center">Berisi informasi yang InsyaAllah bermanfaat.</p>
+    <main class="py-36 px-5 md:px-48">
+      <div class="px-0 md:px-24 flex flex-col items-center w-full">
+        <img
+          src="public/img/gus-hakam.jpg"
+          alt="foto gus hakam"
+          class="h-48 w-48 rounded-full object-cover"
+        />
+        <div class="mx-auto mt-6">
+          <h1 class="text-5xl text-center">GUS</h1>
+          <h1 class="text-5xl font-extrabold text-center">HAKAM KHARIRI</h1>
+          <p class="text-lg text-neutral-500 text-center">
+            Pengasuh Pondok Pesantren
+          </p>
+          <p class="text-lg text-neutral-500 text-center">
+            Darul Falah
+          </p>
+        </div>
+      </div>
 
-      <div class="table-container mx-auto w-4/5 rounded-lg shadow-lg bg-white overflow-hidden">
-        <table class="w-full border-collapse">
-            <thead>
-                <tr>
-                    <th class="bg-green-800 text-white font-bold uppercase tracking-wider py-4">Hari</th>
-                    <th class="bg-green-800 text-white font-bold uppercase tracking-wider py-4">Waktu</th>
-                    <th class="bg-green-800 text-white font-bold uppercase tracking-wider py-4">Nama Ustadz</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="odd:bg-gray-100 hover:bg-green-50 transition-colors duration-300 text-center">
-                    <td class="py-4 text-green-800">Senin</td>
-                    <td class="py-4 text-green-800">08:00 - 09:00</td>
-                    <td class="py-4 text-green-800">Ustadz Ahmad</td>
-                </tr>
-                <tr class="odd:bg-gray-100 hover:bg-green-50 transition-colors duration-300 text-center">
-                    <td class="py-4 text-green-800">Rabu</td>
-                    <td class="py-4 text-green-800">10:00 - 11:00</td>
-                    <td class="py-4 text-green-800">Ustadz Ahmad</td>
-                </tr>
-                <tr class="odd:bg-gray-100 hover:bg-green-50 transition-colors duration-300 text-center">
-                    <td class="py-4 text-green-800">Jumat</td>
-                    <td class="py-4 text-green-800">14:00 - 15:00</td>
-                    <td class="py-4 text-green-800">Ustadz Ahmad</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+      <div class="mt-24 px-0 md:px-24">
+        <h1 class="text-3xl font-extrabold">PROFIL</h1>
+        <p class="text-neutral-500 text-lg text-justify mt-3">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+          doloribus adipisci ut fugiat omnis iste ipsum unde, ducimus, eos dolor
+          repudiandae obcaecati quis eum totam laborum quibusdam sunt. Quos
+          soluta fugit ipsum minima a nemo nisi corrupti fugiat consequuntur
+          reprehenderit at perspiciatis temporibus blanditiis, mollitia, dolores
+          quas minus officia consequatur. Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Eveniet perferendis eum reprehenderit?
+          Velit ex dolorum non culpa. Repellendus recusandae dicta eligendi,
+          veritatis hic soluta repellat qui quod et alias sapiente error ad,
+          perferendis nam. Ratione sit magni voluptate dolor est quae iste quod
+          exercitationem dolore itaque, sequi at nisi vero?
+        </p>
+      </div>
     </main>
 
     <footer
@@ -123,6 +125,15 @@
     </footer>
 
     <script>
+      function toggleDrawer() {
+        const drawer = document.getElementById("drawer");
+        const overlay = document.getElementById("overlay");
+
+        // Toggle the drawer and overlay
+        drawer.classList.toggle("translate-y-full");
+        overlay.classList.toggle("hidden");
+      }
+
       // Script to toggle the mobile menu visibility
       document
         .getElementById("mobile-menu-button")

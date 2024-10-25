@@ -12,12 +12,8 @@
       }
     </style>
   </head>
-  <body class="font-inter overflow-auto no-scrollbar">
-    <div class="w-[400px] h-[400px] bg-green-500 absolute z-1 rounded-full top-[20%] left-[24%] translate-x-[-50%] translate-y-[-50%] blur-[90px] opacity-20"></div>
-    <div class="w-[40px] md:w-[400px] h-[400px] bg-green-500 absolute z-1 rounded-full top-[50%] left-[70%] translate-x-[-50%] translate-y-[-50%] blur-[90px] opacity-20"></div>
-    <div class="w-[400px] h-[400px] bg-green-500 absolute z-1 rounded-full top-[160%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[90px] opacity-20"></div>
-
-    <nav class="bg-primary text-black fixed z-[999] w-full sticky top-0">
+  <body class="font-sora overflow-auto no-scrollbar bg-whiter">
+    <nav class="bg-primary text-black fixed md:relative z-[999] w-full">
       <div
         class="w-full px-5 md:px-48 py-6 flex justify-between items-center bg-primary"
       >
@@ -29,9 +25,10 @@
         <!-- Tampilan Desktop -->
         <div class="hidden md:block">
           <ul class="flex gap-7 items-center text-lg">
-            <li><a href="/">Beranda</a></li>
-            <li><a href="kajian.html">Kajian</a></li>
+            <li><a href="index.html">Beranda</a></li>
+            <!-- <li><a href="kajian.html">Kajian</a></li> -->
             <li><a href="jadwal-kajian.html">Jadwal Kajian</a></li>
+            <li><a href="profil.html">Profil</a></li>
           </ul>
         </div>
 
@@ -79,157 +76,72 @@
           >
         </div>
       </div>
-
     </nav>
 
-    <main class="py-36 px-5 md:px-48">
-      <div class="px-0 md:px-24 flex flex-col items-center w-full">
-        <img
-          src="public/img/gus-hakam.jpg"
-          alt="foto gus hakam"
-          class="h-48 w-48 rounded-full object-cover"
-        />
-        <div class="mx-auto mt-6">
-          <h1 class="text-5xl text-center">GUS</h1>
-          <h1 class="text-5xl font-extrabold text-center">HAKAM KHARIRI</h1>
-          <p class="text-lg text-neutral-500 text-center">
-            Pengasuh Pondok Pesantren.
-          </p>
-        </div>
-      </div>
+    <!-- <main
+      class="py-20 w-full min-h-screen flex flex-col md:justify-start items-center"
+    >
+    <div class="px-5 md:px-48">
+      <h1 class="text-3xl text-center font-extrabold">KAJIAN</h1>
+      <p class="mb-20 text-lg text-center font-sora">
+        Berisi informasi yang InsyaAllah bermanfaat.
+      </p>
+    </div> -->
 
-      <div class="mt-24 px-0 md:px-24">
-        <h1 class="text-3xl font-extrabold">PROFIL</h1>
-        <p class="text-neutral-500 text-lg text-justify mt-3">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-          doloribus adipisci ut fugiat omnis iste ipsum unde, ducimus, eos dolor
-          repudiandae obcaecati quis eum totam laborum quibusdam sunt. Quos
-          soluta fugit ipsum minima a nemo nisi corrupti fugiat consequuntur
-          reprehenderit at perspiciatis temporibus blanditiis, mollitia, dolores
-          quas minus officia consequatur. Lorem ipsum dolor, sit amet
-          consectetur adipisicing elit. Eveniet perferendis eum reprehenderit?
-          Velit ex dolorum non culpa. Repellendus recusandae dicta eligendi,
-          veritatis hic soluta repellat qui quod et alias sapiente error ad,
-          perferendis nam. Ratione sit magni voluptate dolor est quae iste quod
-          exercitationem dolore itaque, sequi at nisi vero?
-        </p>
-      </div>
+    <div class="w-full">
+      <img src="public/img/gus-hakam.jpg" alt="gus" class="w-full h-24 md:h-64 mb-24 object-cover object-center">
+    </div>
+    
 
-      <div class="mt-24 px-0 md:px-24">
-        <h1 class="text-3xl font-extrabold mb-5">KAJIAN</h1>
-        <div class="flex justify-between flex-wrap gap-5 md:flex-nowrap">
-          <div class="w-full md:w-72">
-            <!-- <iframe src="https://youtu.be/embed/PL3Odw-k8W4?si=gM1gbZyt-saJ09Yr" frameborder="0"></iframe> -->
-            <iframe
-              src="https://www.youtube.com/embed/zOvEZ2F_uXg?si=DikT0_hccDON58AK"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-            <h1 class="font-extrabold text-lg tracking-tight mt-2">
-              Umrah Barokah YPI Darul Falah
-            </h1>
-            <!-- <p class="text-lg text-neutral-500 leading-5 mt-1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p> -->
-            <button
-              onclick="toggleDrawer()"
-              class="px-4 py-2 bg-primary mt-5 text-black rounded-full"
-            >
-              Read more
-            </button>
-
-            <div
-              id="overlay"
-              class="fixed inset-0 bg-black bg-opacity-50 hidden z-40 px-72"
-              onclick="toggleDrawer()"
-            ></div>
-
-            <div
-              id="drawer"
-              class="fixed inset-x-0 bottom-0 transform translate-y-full transition-transform duration-300 ease-in-out bg-primary shadow-lg w-80 lg:w-[60rem] mx-auto rounded-t-xl p-10 z-50"
-            >
-              <div class="grid grid-cols-2 justify-center">
-                <iframe
-                  width="400"
-                  height="225"
-                  src="https://www.youtube.com/embed/zOvEZ2F_uXg?si=DikT0_hccDON58AK"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                  class="rounded-t-lg"
-                ></iframe>
-                <div>
-                  <h1 class="font-extrabold text-lg tracking-tight mt-2">
-                    Umrah Barokah YPI Darul Falah
-                  </h1>
-                  <p class="text-lg text-neutral-500 leading-5 mt-1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Ullam nulla quisquam repudiandae impedit atque sequi magnam
-                    blanditiis dolore omnis sint et quaerat itaque excepturi
-                    praesentium ducimus corporis cumque quasi, perferendis
-                    quibusdam distinctio enim. Voluptatibus incidunt sequi
-                    inventore architecto veritatis fugit nam, quos et vel nemo,
-                    iusto possimus, praesentium alias quibusdam. Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Aspernatur aut
-                    sequi quisquam cupiditate nemo ratione consectetur
-                    necessitatibus assumenda earum veritatis.
-                  </p>
-                </div>
-              </div>
+    <div>
+      <div id="content-left">
+        <!-- content baru -->
+        <div class="max-w-4xl mx-auto bg-white overflow-hidden flex mb-10">
+          <div class="relative w-1/2">
+            <img class="w-full h-56 object-cover" src="https://plus.unsplash.com/premium_photo-1726761718590-1017add4c33c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGlzbGFtaWMlMjByZWNpdGF0aW9ufGVufDB8fDB8fHww" alt="Card background image">
+            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex items-end justify-center">
+              <h2 class="text-white text-2xl uppercase p-3">gus <span class="font-bold">hakam</span></h2>
             </div>
           </div>
-          <div class="w-72">
-            <iframe
-              src="https://www.youtube.com/embed/kjLeGvr51dA?si=KJMMX6K2L1pYw7yU"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-            <p class="font-extrabold text-lg tracking-tight mt-2">
-              YPI Darul Falah Ziarah Walisongo
-            </p>
-            <!-- <p class="text-lg text-neutral-500 leading-5 mt-1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p> -->
-            <button
-              onclick="toggleDrawer()"
-              class="px-4 py-2 bg-primary mt-5 text-black rounded-full"
-            >
-              Read more
-            </button>
+          <div class="p-5 w-1/2">
+            <h1 class="text-gray-700 font-sora font-bold mb-2">Manfaat sujud dalam sholat.</h1>
+            <p class="text-gray-700 font-sora">Ini adalah deskripsi card yang berada di bawah gambar background.</p>
+            <button class="bg-white border py-1.5 px-3 border-black mt-5 hover:bg-black hover:text-white font-sora">Read more</button>
           </div>
-          <div class="w-72">
-            <iframe
-              src="https://www.youtube.com/embed/imlMNgo4KBc?si=r9eOQ8SLu9o2vZoe"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-            <p class="font-extrabold text-lg tracking-tight mt-2">
-              Kunci subuh lebih berkah.
-            </p>
-            <p class="text-lg text-neutral-500 leading-5 mt-1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            <button
-              onclick="toggleDrawer()"
-              class="px-4 py-2 bg-primary mt-5 text-black rounded-full"
-            >
-              Read more
-            </button>
+        </div>
+        <!-- content baru -->
+        <div class="max-w-4xl mx-auto bg-white overflow-hidden flex mb-10">
+          <div class="relative w-1/2">
+            <img class="w-full h-56 object-cover" src="https://plus.unsplash.com/premium_photo-1679952778153-faa36584f567?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGlzbGFtaWN8ZW58MHx8MHx8fDA%3D" alt="Card background image">
+            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex items-end justify-center">
+              <h2 class="text-white text-2xl uppercase p-3">gus <span class="font-bold">hakam</span></h2>
+            </div>
+          </div>
+          <div class="p-5 w-1/2">
+            <p class="text-gray-700 font-sora">Ini adalah deskripsi card yang berada di bawah gambar background.</p>
+            <button class="bg-white border py-1.5 px-3 border-black mt-5 hover:bg-black hover:text-white font-sora">Read more</button>
+          </div>
+        </div>
+        <!-- content baru -->
+        <div class="max-w-4xl mx-auto bg-white overflow-hidden flex mb-10">
+          <div class="relative w-1/2">
+            <img class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1637721299399-e0d73462abec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aXNsYW1pYyUyMHJlY2l0YXRpb258ZW58MHx8MHx8fDA%3D" alt="Card background image">
+            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex items-end justify-center">
+              <h2 class="text-white text-2xl uppercase p-3">gus <span class="font-bold">hakam</span></h2>
+            </div>
+          </div>
+          <div class="p-5 w-1/2">
+            <p class="text-gray-700 font-sora">Ini adalah deskripsi card yang berada di bawah gambar background.</p>
+            <button class="bg-white border py-1.5 px-3 border-black mt-5 hover:bg-black hover:text-white font-sora">Read more</button>
           </div>
         </div>
       </div>
+  
+      <div id="content-right">
+  
+      </div>
+    </div>
+      
     </main>
 
     <footer
@@ -239,15 +151,6 @@
     </footer>
 
     <script>
-      function toggleDrawer() {
-        const drawer = document.getElementById("drawer");
-        const overlay = document.getElementById("overlay");
-
-        // Toggle the drawer and overlay
-        drawer.classList.toggle("translate-y-full");
-        overlay.classList.toggle("hidden");
-      }
-
       // Script to toggle the mobile menu visibility
       document
         .getElementById("mobile-menu-button")
@@ -255,6 +158,23 @@
           let menu = document.getElementById("mobile-menu");
           menu.classList.toggle("hidden");
         });
+
+         // Fungsi untuk membatasi panjang teks
+         function limitText(text, limit) {
+            if (text.length > limit) {
+                return text.substring(0, limit) + '...'; // Tambahkan ellipsis jika melebihi batas
+            } else {
+                return text;
+            }
+        }
+
+        // Mengambil teks dari elemen <p>
+        var paragraph = document.getElementById("limited-text");
+        var originalText = paragraph.innerText; // Dapatkan teks asli
+        var limitedText = limitText(originalText, 50); // Membatasi hingga 50 karakter
+
+        // Memperbarui teks di dalam elemen <p>
+        paragraph.innerText = limitedText;
     </script>
   </body>
 </html>
