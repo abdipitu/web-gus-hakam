@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       colors: {
         'primary': '#D6EFD8',
+        'secondary': '#22c55e',
+        'tertiary': '#4ade80',
+        'fourth': '#bbf7d0',
       },
       fontFamily: {
         'karla': ['Karla', 'sans-serif'],
